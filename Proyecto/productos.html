@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nuevo hogar</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width_device-width,initial-scale-1.0">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo"></div>
+  			<a class="bot">
+            	<span></span>
+            	<span></span>
+            	<span></span>
+        	</a>
+        	<h1>Nuevo hogar</h1>
+			 <div class="menu">
+	 			<a href="index.html">Inicio</a>
+				<a href="rescates.html">Rescates</a>
+        		<a href="equipo.html">Quienes somos</a>
+        		<a href="noticias.html">Noticias</a>
+        		<a href="contactos.html">Contactos</a>
+        		<a href="donaciones.html">Donaciones</a>
+        		<a href="productos.html">Productos</a>
+ 			</div>	
+		</nav>
+	</header>
+<section>
+	<h1>Productos</h1>
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <img src="img/compra.png" class="carrito" >
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lista de compras.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+  <div class="row">
+    <div class="col-sm">
+      PRODUCTO<div id="n1"></div><div id="n2"></div><div id="n3"></div><div id="n4"></div>
+      <div id="n5"></div><div id="n6"></div><div id="n7"></div><div id="n8"></div><button id="CalcularTotal" class="btn btn-primary">TOTAL</button>
+    </div>
+    <div class="col-sm">
+      CANTIDAD<div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div>
+      <div id="c5"></div><div id="c6"></div><div id="c7"></div><div id="c8"></div>PRECIO TOTAL
+    </div>
+    <div class="col-sm">
+      PRECIO<div id="p1"></div><div id="p2"></div><div id="p3"></div><div id="p4"></div>
+      <div id="p5"></div><div id="p6"></div><div id="p7"></div><div id="p8"></div><div id="total"></div>
+    </div>
+  </div>
+  
+  <label>INFORMACIÓN DE LA TARJETA</label>
+			<div class="fila">
+				<div class="col"><input type="text" placeholder="Número de la tarjeta"></div>
+				<div class="col"><input type="text" placeholder="CVC"></div>
+			</div>
+			<div class="fila">
+				<div class="col"><input type="date" placeholder="Fecha de vencimiento" ></div>
+			</div>
+			<div class="fila">
+				<div class="col">
+					<select>
+						<option>Seleccione su tipo de tarjeta</option>
+						<option>Visa</option>
+						<option>Mastercard</option>
+						<option>American Express</option>
+						<option>Discover</option>
+					</select>
+				</div>
+			</div>
+			<label>DATOS PERSONALES</label>
+			<div class="fila">
+				<div class="col"><input type="text" placeholder="Nombre"></div>
+				<div class="col"><input type="text" placeholder="Apellidos"></div>
+			</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Finalizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<div class="card-deck">
+  <div class="card">
+    <img src="img/p1.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Croquetas para perro.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton1" class="btn btn-primary">Comprar</button>
+      <button id="boton1-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/p2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Collares para perro.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton2" class="btn btn-primary">Comprar</button>
+      <button id="boton2-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/p3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Corta Uñas para mascotas.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton3" class="btn btn-primary">Comprar</button>
+      <button id="boton3-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/p4.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tazón de comida.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton4" class="btn btn-primary">Comprar</button>
+      <button id="boton4-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+</div>
+<div class="card-deck">
+  <div class="card">
+    <img src="img/p5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Juguete para perro.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton5" class="btn btn-primary">Comprar</button>
+      <button id="boton5-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/p6.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Shampoo para perro.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton6" class="btn btn-primary">Comprar</button>
+      <button id="boton6-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/p7.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Chaleco para perro.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton7" class="btn btn-primary">Comprar</button>
+      <button id="boton7-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/p8.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Cepillo de dientes.</h5>
+      <p class="card-text">Disponible<br>5$</p>
+    </div>
+    <div class="card-footer">
+      <button id="boton8" class="btn btn-primary">Comprar</button>
+      <button id="boton8-r" class="btn btn-primary">Remover</button>
+    </div>
+  </div>
+</div>
+
+</section>
+<footer>
+    	<div class="containerc" class="redes">
+      <div><a href="https://es-la.facebook.com/" target="_blanck"><img src="img/facebook.png"></a></div>
+      <div><a href="https://www.instagram.com/?hl=es" target="_blanck"><img src="img/instagram.png"></a></div>
+      <div><a href="https://twitter.com/?lang=es" target="_blanck"><img src="img/twitter.png"></a></div>
+      </div>
+      <div class="copy">© 2021 Nuevo hogar | Todos los derechos Reservados</div>
+</footer>
+	<script src="script.js"></script>
+  	<script type="text/javascript">
+        $(".bot").on("click", function(){
+            $('.menu').toggleClass("show");
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
